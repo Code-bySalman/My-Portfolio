@@ -6,6 +6,7 @@ import Header from "./Header";
 import VariableProximity from "../components/VariableProximity";
 
 const experiences = [
+ 
   {
     year: "2024",
     role: "Full Stack Intern",
@@ -13,18 +14,13 @@ const experiences = [
     description:
       "Built and deployed full website using React, Tailwind and Vercel.",
   },
-  {
-    year: "2023",
-    role: "Open Source Contributor",
-    company: "GirlScript",
-    description:
-      "Contributed to open-source projects and mentored beginners.",
-  },
+ 
 ];
 
 const skills = [
   "React",
   "Node.js",
+  "Next.js",
   "MongoDB",
   "Tailwind CSS",
   "JavaScript",
