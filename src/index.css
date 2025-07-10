@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Force Tailwind to use class-based dark mode */
+@layer base {
+  html.dark {
+    --tw-bg-opacity: 1;
+    background-color: rgb(12 12 12 / var(--tw-bg-opacity));
+    color: white;
+  }
+}
+/* index.css */
+
