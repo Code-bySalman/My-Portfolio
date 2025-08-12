@@ -30,10 +30,15 @@ const timelineData = [
     description: "I developed a full-stack website integrated with AI to assist users in planning personalized trips and vacations with ease. The platform leverages a modern tech stack for a responsive interface and secure backend, ensuring seamless user experiences. AI-driven features provide tailored travel recommendations, itineraries, and real-time updates for a stress-free planning process.",
   },
    {
-    title: "Working on something exciting!",
+    title: "HustleHone- Your Resume Buddy",
     subtitle: "2025",
-    description: "Busy building bigger and better Saas.",
+    description:"HustleHone is a SaaS resume builder that combines AI assisted suggestions, real time previews, and easy customization so users can create polished resumes in minutes."
   },
+  {
+    title:"I am cooking bigger things, watch out!",
+    subtitle: "2025 ",
+    
+  }
 ];
 
 const AboutTimeline = () => {

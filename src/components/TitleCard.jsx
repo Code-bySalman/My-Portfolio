@@ -34,10 +34,13 @@ const projects = [
   },
   {
     id: 4,
-    title: "Learning and working on better and bigger projects",
+    title: "HustleHone- Your Resume Buddy.",
     description:
-      "I know I need good projects under my belt and I am working on it, till then do check out my mentioned projects here.",
-    image: "/icons/Wanderly.png",
+      "HustleHone is a lightweight resume builder that turns your experience into polished resumes in minutes.AI assisted suggestions, fast templates and real time preview so building a resume actually feels painless.Try the live demo or check the repo to see it in action.",
+    image: "/icons/HustleHone.png",
+       website: "https://hustle-hone.vercel.app/",
+    github: "https://github.com/Code-bySalman/HustleHone",
+     stack:["Next.js (React)", "TypeScript", "Tailwind CSS", "Prisma", "Postgres (Neon)", "Clerk (Auth)",  "Stripe (Payments - test)", "Framer Motion", "Radix UI", "lucide-react", "react-to-print", "Vercel"],
   },
 ];
 
@@ -65,7 +68,7 @@ const TitleCard = () => (
         variants={hoverAnimation}
         initial="initial"
         whileHover="hover"
-        className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md p-6 flex flex-col space-y-4 transition-all duration-300"
+        className="bg-white dark:bg-[#1a1a1a] border-2 border-gray-500 dark:border-gray-700 rounded-2xl shadow-gray-700 p-6 flex flex-col space-y-4 transition-all duration-200"
       >
         <div className="w-[70px] h-[70px]">
           <TiltedCard
