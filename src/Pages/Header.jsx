@@ -141,7 +141,7 @@ const Header = () => {
 
           {/* Resume Download */}
           <a
-            href="/Salman-Usmani-Resume.pdf"
+            href="/Salman'sResume (2).pdf"
             download
             className="cursor-pointer hover:scale-110 transition-all duration-300 relative group"
             title="Download Resume"
