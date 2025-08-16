@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Moon, Sun, FileDown } from "lucide-react";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -66,6 +67,7 @@ const Header = () => {
             : "bg-transparent border border-transparent"}
         `}
       >
+        {/* Navigation Icons */}
         <div className="flex items-center gap-5 relative">
           {navItems.map((item) => {
             const isActive = activeKey === item.key;
@@ -94,8 +96,9 @@ const Header = () => {
 
         <span className="text-gray-400 text-xl font-light">|</span>
 
+        {/* Social Icons */}
         <div className="flex items-center gap-4">
-          {(["github", "linkedin", "twitter"]).map((icon) => (
+          {["github", "linkedin", "twitter"].map((icon) => (
             <div key={icon} className="relative group">
               <button
                 onClick={() => window.open(socialUrls[icon], "_blank")}
@@ -113,20 +116,41 @@ const Header = () => {
 
         <span className="text-gray-400 text-xl font-light">|</span>
 
-        <div
-          onClick={handleThemeToggle}
-          className="cursor-pointer hover:scale-110 transition-all duration-300 relative group"
-          role="button"
-          aria-pressed={isDarkMode}
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") handleThemeToggle();
-          }}
-        >
-          <img src={isDarkMode ? "/icons/moon.png" : "/icons/theme.png"} alt="Toggle Theme" className="h-6 w-6 filter dark:invert dark:brightness-200" />
-          <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap dark:bg-white dark:text-black shadow-md z-10">
-            {isDarkMode ? "Dark Mode" : "Light Mode"}
+        {/* Theme + Resume Icons */}
+        <div className="flex items-center gap-4">
+          {/* Theme Toggle */}
+          <div
+            onClick={handleThemeToggle}
+            className="cursor-pointer hover:scale-110 transition-all duration-300 relative group"
+            role="button"
+            aria-pressed={isDarkMode}
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") handleThemeToggle();
+            }}
+          >
+            {isDarkMode ? (
+              <Moon className="h-6 w-6 text-black dark:text-white" />
+            ) : (
+              <Sun className="h-6 w-6 text-black dark:text-white" />
+            )}
+            <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap dark:bg-white dark:text-black shadow-md z-10">
+              {isDarkMode ? "Dark Mode" : "Light Mode"}
+            </div>
           </div>
+
+          {/* Resume Download */}
+          <a
+            href="/Salman-Usmani-Resume.pdf"
+            download
+            className="cursor-pointer hover:scale-110 transition-all duration-300 relative group"
+            title="Download Resume"
+          >
+            <FileDown className="h-6 w-6 text-black dark:text-white" />
+            <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap dark:bg-white dark:text-black shadow-md z-10">
+              Resume
+            </div>
+          </a>
         </div>
       </div>
     </motion.nav>
